@@ -50,3 +50,15 @@ small {
   font-size: small;
   font-style: italic;
 }
+
+img {
+  margin-left: 25px;
+}
+
+li {
+  cursor: pointer;
+}
+
+li:hover {
+  box-shadow: 0 0 20px 1px red;
+}

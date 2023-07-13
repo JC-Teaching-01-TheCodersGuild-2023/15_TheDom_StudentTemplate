@@ -1,17 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <script defer src="./app.js"></script>
-    <title>Rask 5 - ToDo List</title>
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="./app.js"></script>
+  <title>Rask 5 - ToDo List</title>
+</head>
+<body>
+  <main class="container">
+    <h1>My todo list</h1>
     
-
-    <script>
-    
-    </script>
-  </body>
+    <form id="todo">
+      <label for="title">Title</label>
+      <input type="text" name="title" id="title" required>
+      <label for="priority">Priority</label>
+      <select name="priority" id="priority">
+        <option value="low">Low</option>
+        <option value="medium" selected>Medium</option>
+        <option value="high">High</option>
+      </select>
+      <button>Add</button>
+    </form>
+  
+    <ul id="todo-pane">
+      <!-- These are just example task, delete these once you have completed your code -->
+      <li class="todo">
+        <img src="https://cdn1.iconfinder.com/data/icons/prettyoffice8/256/Flag-yellow.png">
+        Task One
+      </li>
+      <li class="todo just-created">
+        <img src="https://cdn1.iconfinder.com/data/icons/prettyoffice8/256/Flag-green.png">
+        Task Two.
+      </li>
+    </ul>
+  </main>
+</body>
 </html>

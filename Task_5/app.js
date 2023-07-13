@@ -1,13 +1,21 @@
-// Get the form by ID from the forms collection.
-const form = document.forms.todo;
+const toDoList = []
 
-// Add a submit listener to the form that prevents default.
-form.addEventListener('submit', function (event) {
+// Global Variable.
+const form = document.querySelector('form');
+
+// Function to create the li elements
+createList = () => {
+  
+}
+
+// Function to remove dom element
+deleteTask = (id) => {
+
+}
+
+// Collect input from user
+form.addEventListener('submit', (event) => {
   event.preventDefault();
-});
 
-// Add a click listener to the list item. When clicked it should remove the element from the DOM.
-const todo = document.querySelector('.todo');
-todo.addEventListener('click', function (event) {
-  event.currentTarget.remove();
+  createList()
 });
