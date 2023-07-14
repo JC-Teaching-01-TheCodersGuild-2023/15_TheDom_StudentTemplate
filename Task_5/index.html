@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./style.css">
-  <script defer src="./app.js"></script>
-  <title>Rask 5 - ToDo List</title>
+  <link rel="stylesheet" href="../Task_6/style.css">
+  <title>Rask 5</title>
 </head>
 <body>
+  <a href="https://codepen.io/andrushka/pen/abJLLrO?editors=1010">Codepen Link</a>
   <main class="container">
     <h1>My todo list</h1>
     
@@ -24,16 +24,21 @@
     </form>
   
     <ul id="todo-pane">
-      <!-- These are just example task, delete these once you have completed your code -->
-      <li class="todo">
-        <img src="https://cdn1.iconfinder.com/data/icons/prettyoffice8/256/Flag-yellow.png">
-        Task One
-      </li>
       <li class="todo just-created">
-        <img src="https://cdn1.iconfinder.com/data/icons/prettyoffice8/256/Flag-green.png">
-        Task Two.
+        <img src="https://cdn1.iconfinder.com/data/icons/prettyoffice8/256/Flag-yellow.png">
+        <div>This is my title.</div>
       </li>
     </ul>
   </main>
+
+  <script>
+    // Get the form by ID from the forms collection.
+    const form = document.querySelector('form');
+
+    // 1. Add a submit listener to the form that prevents default.
+    // 2. Fill out the title and submit 
+    // 3. It shouldn't submit and you shouldn't see 'Not Found'.
+    // 4. Add a click listener to the list item. When clicked it should remove the element from the DOM.
+  </script>
 </body>
 </html>
