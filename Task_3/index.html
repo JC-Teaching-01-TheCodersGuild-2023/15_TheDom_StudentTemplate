@@ -1,41 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="#">
-    <link rel="stylesheet" href="../Task_6/style.css">
-    <title>Task 3</title>
-  </head>
-  <body>
-    <a href="https://codepen.io/andrushka/pen/RwpjgRg?editors=1010">Codepen Link</a>
-    <main class="container">
-      <h1>My todo list</h1>
-      
-      <form id="todo">
-        <label for="title">Title</label>
-        <input type="text" name="title" id="title" required>
-        <label for="priority">Priority</label>
-        <select name="priority" id="priority">
-          <option value="low">Low</option>
-          <option value="medium" selected>Medium</option>
-          <option value="high">High</option>
-        </select>
-        <button>Add</button>
-      </form>
-    
-      <ul id="todo-pane">
-        <li class="todo just-created">
-          <img src="https://cdn1.iconfinder.com/data/icons/prettyoffice8/256/Flag-yellow.png">
-          <div>Do the washing.</div>
-        </li>
-      </ul>
-    </main>
 
-    <script>
-      // Remove the list item element that says 'Do the washing'.
-      // Use Element.remove().
-      // See https://developer.mozilla.org/en-US/docs/Web/API/Element/remove
-    </script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="#">
+  <link rel="stylesheet" href="../Task_6/style.css">
+  <title>Task 3</title>
+</head>
+
+<body>
+  <a href="https://codepen.io/andrushka/pen/RwpjgRg?editors=1010">Codepen Link</a>
+  <main class="container">
+    <h1>My todo list</h1>
+
+    <form id="todo">
+      <label for="title">Title</label>
+      <input type="text" name="title" id="title" required>
+      <label for="priority">Priority</label>
+      <select name="priority" id="priority">
+        <option value="low">Low</option>
+        <option value="medium" selected>Medium</option>
+        <option value="high">High</option>
+      </select>
+      <button>Add</button>
+    </form>
+
+    <ul id="todo-pane">
+      <li class="todo just-created">
+        <img src="https://cdn1.iconfinder.com/data/icons/prettyoffice8/256/Flag-yellow.png">
+        <div>Do the washing.</div>
+      </li>
+    </ul>
+  </main>
+
+  <script>
+    // Remove the list item element that says 'Do the washing'.
+    // Use Element.remove().
+    // See https://developer.mozilla.org/en-US/docs/Web/API/Element/remove
+    let listItem = document.querySelector('.just-created')
+    listItem.remove();
+  </script>
+</body>
+
 </html>
