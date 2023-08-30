@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="#">
+  <link rel="shortcut icon" href="#">
   <link rel="stylesheet" href="../Task_6/style.css">
   <title>Rask 5</title>
 </head>
+
 <body>
   <a href="https://codepen.io/andrushka/pen/abJLLrO?editors=1010">Codepen Link</a>
   <main class="container">
     <h1>My todo list</h1>
-    
+
     <form id="todo">
       <label for="title">Title</label>
       <input type="text" name="title" id="title" required>
@@ -23,12 +25,13 @@
       </select>
       <button>Add</button>
     </form>
-  
+
     <ul id="todo-pane">
       <li class="todo just-created">
         <img src="https://cdn1.iconfinder.com/data/icons/prettyoffice8/256/Flag-yellow.png">
         <div>This is my title.</div>
       </li>
+      
     </ul>
   </main>
 
@@ -37,9 +40,18 @@
     const form = document.querySelector('form');
 
     // 1. Add a submit listener to the form that prevents default.
-    // 2. Fill out the title and submit 
-    // 3. It shouldn't submit and you shouldn't see 'Not Found'.
+    form.addEventListener('submit', function () {
+      alert('submitted');
+      event.preventDefault();
+    });
+    // 2. Fill out the title and submit X
+    // 3. It shouldn't submit and you shouldn't see 'Not Found'. X
     // 4. Add a click listener to the list item. When clicked it should remove the element from the DOM.
+    const todo = document.querySelectorAll('.todo');
+    todo.addEventListener('click', function() {
+      event.currentTarget.remove();
+    })
   </script>
 </body>
+
 </html>
