@@ -11,28 +11,32 @@ const todoPane = document.getElementById('todo-pane');
 const prioritySelect = document.querySelectorAll('.priority').value;
 const allTodos = document.getElementsByClassName('todo');
 
-// Add an event listener that will
-// 1. Create a new todo. The details should come from the form.
-// 2. Insert it into the DOM.
-// 3. Clear the title input ready to create a new todo note.
-// 4. Prevent the default behaviour (ie don't submit to a server).
+
 
 form.addEventListener('submit', function(e) {
   for (const todo of allTodos){
     todo.classList.remove('just-created');
   }
   const titleInput = document.getElementById('title').value;
-  const newTodo = createTodo(titleInput);
+  const newTodo = createTodo(titleInput, prioritySelect);
   todoPane.appendChild(newTodo);
   e.preventDefault();
   form.reset();
 })
 
-function createTodo(title) {
+function createTodo(title, priority) {
+
 const newText = document.createTextNode(title);
+const newDiv = document.createElement('div');
+newDiv.appendChild(newText)
+
+const image = document.createElement('img');
+image.src = priorityImages[priority];
+
 const newListItem = document.createElement('li');
-newListItem.classList.add('todo', 'just-created')
-newListItem.appendChild(newText);
+newListItem.classList.add('todo', 'just-created');
+newListItem.appendChild(image);
+newListItem.appendChild(newDiv);
 newListItem.addEventListener('click', function(e) {
   e.currentTarget.remove();
 })
