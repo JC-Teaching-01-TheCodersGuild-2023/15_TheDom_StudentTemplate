@@ -1,4 +1,4 @@
-console.log('I am Connected')
+// console.log('I am Connected')
 
 // Demo - 1
 /*
@@ -13,11 +13,11 @@ rootVar = window;
 // *** There is no MAGIC in coding, ssssh don't tell anyone though *** \\
 // Ones you may recognise
 // alert, prompt, console
-// rootVar = window.console;
+rootVar = window.console;
 // Document Object
 // rootVar = window.document;
-// rootVar = document.body;
-// rootVar = document.head;
+rootVar = document.body;
+rootVar = document.head;
 // rootVar = document.location;
 // rootVar = document.
 console.log(rootVar);
@@ -26,27 +26,27 @@ console.log(rootVar);
 // Demo - 2
 /*
 // (Single Element)
-let exampleID = (document.getElementById('testID').innerHTML = 'hello everyone'); // This is always explicit
+// let exampleID = (document.getElementById('testID').innerHTML = 'Hello Class'); // This is always explicit
 
 // Multi Selector
-let exampleClass = document.getElementsByClassName('testClass')[2].innerHTML; // could be more than one element
-let exampleTag = document.getElementsByTagName('h1')[0].innerHTML; // could be more than one element
+// let exampleClass = document.getElementsByClassName('testClass')[2].innerHTML; // could be more than one element
+// let exampleTag = document.getElementsByTagName('h1')[0].innerHTML = 'Hello Sam'; // could be more than one element
 
-console.log(exampleID);
-console.log(exampleClass);
-console.log(exampleTag);
+// // console.log(exampleID);
+// console.log(exampleClass);
+// console.log(exampleTag);
 
-// single selector - swiss arm knife
-let exampleIDv2 = (document.querySelector('div').style.color = 'blue');
+// // single selector - swiss arm knife
+// let exampleIDv2 = (document.querySelector('div').style.color = 'blue');
 
-// Multi Selector
+// // Multi Selector
 let exampleTagv2 = document.querySelectorAll('p'); // returns you collection and you can either select just one with for example [1] or loop through them with the object loop 'for of'
 
 for (let i of exampleTagv2) {
 	i.style.color = 'tomato';
 }
 
-console.log(exampleIDv2);
+// console.log(exampleIDv2);
 console.log(exampleTagv2);
 */
 
@@ -58,17 +58,18 @@ document.getElementsByTagName('input')[0].value = 'NewValueText';
 document.getElementsByTagName('input')[0].id = 'NewID';
 document.getElementById('testID').classList.add('tempStyle');
 
-// document.getElementsByTagName('div')[1].classList.add('newClass');
-// document.getElementsByTagName('h1')[0].innerHTML = 'The new text';
-// document.getElementById('list').style.color = 'teal';
+document.getElementsByTagName('div')[1].classList.add('newClass');
+document.getElementsByTagName('h1')[0].innerHTML = 'The new text';
+document.getElementById('list').style.color = 'teal';
 
-// document.querySelector('a').setAttribute('href', 'https://www.redrc.net/');
+document.querySelectorAll('a')[1].setAttribute('href', 'https://www.redrc.net/');
 */
 
 // Demo - 4
 /*
-let btn = document.createElement('button');
-btn.innerHTML = 'New Button';
+const btn = document.createElement('button');
+const newText = document.createTextNode('New Button');
+btn.appendChild(newText)
 document.getElementsByTagName('h1')[0].appendChild(btn).firstChild;
 
 document.getElementsByTagName('p')[0].remove();
@@ -93,11 +94,12 @@ document.getElementsByTagName('div')[0].addEventListener('mouseout', arrowExp11)
 
 // Demo - 6
 /*
-let inputVal = () => {
+inputVal = () => {
+	// Just showing different ways can get the value as will need something like the last one for next lesson
   console.log(document.getElementsByTagName('input')[0].value)
+  console.log(document.getElementsByName('inputName')[0].value)
+  console.log(document.querySelector('input[id="inputID"]').value)
 }
-
-inputVal()
 
 document.getElementById('myBtn').addEventListener('click', inputVal);
 */
